@@ -5,7 +5,7 @@ interface TimelineTypes {
   timeline: {
     title: string;
     date: string;
-    description: any[];
+    description: (string | string[])[];
   }[];
 }
 

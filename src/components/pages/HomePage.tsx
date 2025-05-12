@@ -1,38 +1,21 @@
 import React from "react";
 import Header from "../Header/Header";
 import ProjectCard from "../Card/ProjectCard";
-import SalesMLoginImg from "@/public/images/sales_m_1.png";
-import SalesMServScImg from "@/public/images/sales_m_2.png";
 import Timeline from "../Timeline/Timeline";
-import HTML from "@/public/techImg/HTML5.svg";
-import CSS3 from "@/public/techImg/CSS3.svg";
-import NEXTJS from "@/public/techImg/Next.js.svg";
-import JS from "@/public/techImg/JavaScript.svg";
-import Spring from "@/public/techImg/Spring.svg";
-import MySQL from "@/public/techImg/MySQL.svg";
 import Contact from "../Contact/Contact";
-import Image from "next/image";
-import MyImage from "@/public/images/img1.png";
+import Intro from "./Intro";
 
 const HomePage = () => {
   return (
     <div className="pl-8 pr-8 md:pl-20 md:pr-20">
       <Header />
       <div className="flex justify-between items-center mt-20" id="home">
-        <div>
-          <span className="text-lg block">Full Stack Developer</span>
-          <span className="text-4xl">
-            Hi, <span className="text-blue-200">I'm </span> Pradeep Suthar
-          </span>
-        </div>
-        <div>
-          <Image src={MyImage} alt="MyImage" width={500} height={500} />
-        </div>
+        <Intro />
       </div>
 
       <div className="mt-10" id="about">
         <h1 className="text-2xl pt-2 pb-2 text-blue-200">About me</h1>
-        <span className="">
+        <span>
           React.js/Next.js Developer with 1.5+ year of experience delivering
           high-quality web applications. Skilled in JavaScript, TypeScript, and
           MySQL, with expertise in building responsive websites and ensuring
@@ -43,7 +26,7 @@ const HomePage = () => {
       <div id="projects">
         <ProjectCard
           title="Personal Projects"
-          images={[SalesMLoginImg, SalesMServScImg]}
+          images={["/images/sales_m_1.png", "/images/sales_m_2.png"]}
           name="Garage Sales Management"
           description={[
             `Built a full-stack sales management system with Next.js (frontend)
@@ -55,7 +38,14 @@ const HomePage = () => {
             `Integrated NextAuth for authentication and managed application
               state using Redux and React Hook Form.`,
           ]}
-          techStack={[HTML, CSS3, JS, NEXTJS, MySQL, Spring]}
+          techStack={[
+            "/techImg/HTML5.svg",
+            "/techImg/CSS3.svg",
+            "/techImg/JavaScript.svg",
+            "/techImg/Next.js.svg",
+            "/techImg/MySQL.svg",
+            "/techImg/Spring.svg",
+          ]}
         />
       </div>
 

@@ -1,12 +1,14 @@
-import Image, { StaticImageData } from "next/image";
+"use client";
+
+import Image from "next/image";
 import React, { FC } from "react";
 
 interface ProjectCardTypes {
-  images: StaticImageData[];
+  images: string[];
   title: string;
   name: string;
   description: string[];
-  techStack?: StaticImageData[];
+  techStack?: string[];
 }
 
 const ProjectCard: FC<ProjectCardTypes> = ({
@@ -28,6 +30,9 @@ const ProjectCard: FC<ProjectCardTypes> = ({
                   src={image}
                   alt="SalesMLoginImg"
                   className="rounded-lg inline-block"
+                  width={50}
+                  style={{ width: "100%", height: "100%" }}
+                  height={50}
                 />
               </div>
             ))}
