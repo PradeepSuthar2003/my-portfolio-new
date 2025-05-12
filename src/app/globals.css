@@ -4,12 +4,16 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #080808;
+}
+
+html{
+  scroll-behavior: smooth;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #080808;
     --foreground: #ededed;
   }
 }
